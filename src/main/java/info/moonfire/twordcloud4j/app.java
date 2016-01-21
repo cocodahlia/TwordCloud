@@ -126,6 +126,7 @@ public class app {
         }
         return queryResult;
     }
+    
 
     private static String getQuery() {
         Scanner sc = new Scanner(System.in);
