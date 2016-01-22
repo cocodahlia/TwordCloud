@@ -17,8 +17,7 @@ import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.URLEncoder;
-import java.util.function.Consumer;
-import java.util.logging.Level;
+
 
 public class app {
 
@@ -54,9 +53,7 @@ public class app {
         
         try (PrintWriter filewriter = new PrintWriter(new BufferedWriter(new FileWriter(new File("resultList.csv"))))) {
             analizeTweet.entrySet().stream().forEach((Map.Entry<String, Integer> hoge) -> {
-                filewriter.write("\"" + hoge.getValue() + "\"" + "," + "\"" + hoge.getKey() + "\""+"\r\n");
-                
-                
+                filewriter.write("\"" + hoge.getValue() + "\"" + "," + "\"" + hoge.getKey() + "\""+"\r\n"); 
             });
         }
     }
